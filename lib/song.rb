@@ -40,7 +40,9 @@ class Song
   def self.artist_count
     hash = {}
     @@artists.flatten.each do |artist|
-
+      hash[artist] ||= "" if !hash[artist]
+      hash[artist] += 1
     end
+    hash
   end
 end
