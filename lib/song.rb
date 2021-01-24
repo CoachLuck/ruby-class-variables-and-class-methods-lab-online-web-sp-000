@@ -12,7 +12,6 @@ class Song
     @genre = genre
 
     @@artists << artist if !@@artists.include?(artist)
-    @@genres[@genre] += 1
 
   end
 
