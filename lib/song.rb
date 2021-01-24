@@ -41,7 +41,7 @@ class Song
     hash = {}
     @@artists.flatten.each do |artist|
       hash[artist] ||= "" if !hash[artist]
-      hash[artist] += 1
+      hash[artist] += artist
     end
     hash
   end
