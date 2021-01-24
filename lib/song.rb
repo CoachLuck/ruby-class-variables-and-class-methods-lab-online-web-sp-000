@@ -35,6 +35,7 @@ class Song
       hash[genre] ||= 0 if !hash[genre]
       hash[genre] += 1
     end
+    hash
   end
 
   def self.artist_count
