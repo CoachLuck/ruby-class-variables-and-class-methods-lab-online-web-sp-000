@@ -24,15 +24,20 @@ class Song
     @@artists.uniq
   end
 
-  def self.artist_count
-    @@artists.length
-  end
-
   def self.genres
     @@genres.uniq
   end
 
   def self.genres_count
-    @@genres.length
+    arr = @@genres
+    hash = {}
+    arr.each do |genre| 
+      hash[genre] ||= 0 if !hash[genre]
+      hash[genre] += 1
+    end
+  end
+
+  def self.artist_count
+    @@artists.length
   end
 end
