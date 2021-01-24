@@ -1,7 +1,7 @@
 class Song
   @@count = 0
   @@artists = []
-  @@genres = {}
+  @@genres = []
 
   attr_reader :name, :artist, :genre
 
@@ -11,8 +11,8 @@ class Song
     @artist = artist
     @genre = genre
 
-    @@artists << @artist if !@@artists.include?(@artist)
-    @@genres[genre] += 1
+    @@artists << @artist
+    @@genres << @genre
 
   end
 
