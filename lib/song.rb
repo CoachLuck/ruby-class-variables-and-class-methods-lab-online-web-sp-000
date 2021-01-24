@@ -29,9 +29,8 @@ class Song
   end
 
   def self.genre_count
-    arr = @@genres
     hash = {}
-    arr.each do |genre|
+    @@genres.each do |genre|
       hash[genre] ||= 0 if !hash[genre]
       hash[genre] += 1
     end
@@ -39,6 +38,9 @@ class Song
   end
 
   def self.artist_count
-    @@artists.length
+    hash = {}
+    @@artists.flatten.each do |artist|
+
+    end
   end
 end
